@@ -1,0 +1,59 @@
+2025-02-24 10:00:16,233 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:00:16,234 - INFO - Navigating to QAD URL...
+2025-02-24 10:00:20,810 - INFO - Launched QAD application from shortcut
+2025-02-24 10:00:25,815 - INFO - Handled protocol dialog and QAD launch
+2025-02-24 10:00:30,951 - INFO - Login credentials submitted successfully
+2025-02-24 10:01:04,117 - ERROR - Element //button[contains(text(), 'Export')] not found within 20 seconds
+2025-02-24 10:01:04,122 - ERROR - Export to Excel failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C67AE735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C6A3B1B4+2060276]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C6992338+1368440]
+	(No symbol) [0x00007FF6C65832A9]
+	(No symbol) [0x00007FF6C658349B]
+	(No symbol) [0x00007FF6C65C40E7]
+	(No symbol) [0x00007FF6C65A429F]
+	(No symbol) [0x00007FF6C657964D]
+	(No symbol) [0x00007FF6C65C1C00]
+	(No symbol) [0x00007FF6C65A3FC3]
+	(No symbol) [0x00007FF6C6578B96]
+	(No symbol) [0x00007FF6C6577E50]
+	(No symbol) [0x00007FF6C65789C3]
+	(No symbol) [0x00007FF6C6600214]
+	(No symbol) [0x00007FF6C66906CF]
+	(No symbol) [0x00007FF6C6603A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6C6AF45BD+279981]
+	simdutf::get_active_implementation [0x00007FF6C67378C1+409457]
+	simdutf::get_active_implementation [0x00007FF6C6732BA4+389716]
+	simdutf::get_active_implementation [0x00007FF6C6732CE9+390041]
+	simdutf::get_active_implementation [0x00007FF6C67262E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 10:01:04,124 - ERROR - Automation failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C67AE735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C6A3B1B4+2060276]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C6992338+1368440]
+	(No symbol) [0x00007FF6C65832A9]
+	(No symbol) [0x00007FF6C658349B]
+	(No symbol) [0x00007FF6C65C40E7]
+	(No symbol) [0x00007FF6C65A429F]
+	(No symbol) [0x00007FF6C657964D]
+	(No symbol) [0x00007FF6C65C1C00]
+	(No symbol) [0x00007FF6C65A3FC3]
+	(No symbol) [0x00007FF6C6578B96]
+	(No symbol) [0x00007FF6C6577E50]
+	(No symbol) [0x00007FF6C65789C3]
+	(No symbol) [0x00007FF6C6600214]
+	(No symbol) [0x00007FF6C66906CF]
+	(No symbol) [0x00007FF6C6603A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6C6AF45BD+279981]
+	simdutf::get_active_implementation [0x00007FF6C67378C1+409457]
+	simdutf::get_active_implementation [0x00007FF6C6732BA4+389716]
+	simdutf::get_active_implementation [0x00007FF6C6732CE9+390041]
+	simdutf::get_active_implementation [0x00007FF6C67262E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 10:01:07,151 - INFO - Browser session closed successfully

@@ -1,0 +1,13 @@
+2025-02-24 12:36:56,623 - INFO - Edge WebDriver initialized successfully
+2025-02-24 12:36:56,624 - INFO - Starting QAD application via URL protocol...
+2025-02-24 12:37:04,036 - INFO - Found 1 existing QAD windows
+2025-02-24 12:37:04,089 - INFO - Navigated to QAD URL: qadsh://browse/invoke
+2025-02-24 12:37:14,090 - INFO - Attempting to connect to QAD.Client (attempt 1/3)
+2025-02-24 12:37:17,738 - WARNING - Login attempt 1 failed: New QAD window not found
+2025-02-24 12:37:22,738 - INFO - Attempting to connect to QAD.Client (attempt 2/3)
+2025-02-24 12:37:26,768 - WARNING - Login attempt 2 failed: New QAD window not found
+2025-02-24 12:37:31,771 - INFO - Attempting to connect to QAD.Client (attempt 3/3)
+2025-02-24 12:37:34,171 - WARNING - Login attempt 3 failed: New QAD window not found
+2025-02-24 12:37:34,171 - ERROR - Login failed: New QAD window not found
+2025-02-24 12:37:34,172 - ERROR - Automation failed: New QAD window not found
+2025-02-24 12:37:38,284 - INFO - Browser session closed successfully

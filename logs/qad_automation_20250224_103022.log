@@ -1,0 +1,22 @@
+2025-02-24 10:30:29,457 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:30:29,458 - INFO - Navigating to QAD URL...
+2025-02-24 10:30:31,504 - INFO - Looking for Edge protocol dialog (attempt 1/5)
+2025-02-24 10:30:33,279 - WARNING - Dialog handling attempt 1 failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:35,283 - INFO - Looking for Edge protocol dialog (attempt 2/5)
+2025-02-24 10:30:35,531 - WARNING - Dialog handling attempt 2 failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:37,538 - INFO - Looking for Edge protocol dialog (attempt 3/5)
+2025-02-24 10:30:37,981 - WARNING - Dialog handling attempt 3 failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:39,985 - INFO - Looking for Edge protocol dialog (attempt 4/5)
+2025-02-24 10:30:40,283 - WARNING - Dialog handling attempt 4 failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:42,289 - INFO - Looking for Edge protocol dialog (attempt 5/5)
+2025-02-24 10:30:42,575 - WARNING - Dialog handling attempt 5 failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:42,575 - WARNING - Protocol dialog handling failed: There are 2 elements that match the criteria {'title_re': '.*Microsoft.*Edge.*', 'top_level_only': True, 'backend': 'uia', 'enabled_only': False, 'visible_only': False}
+2025-02-24 10:30:52,584 - INFO - Attempting to connect to login window (attempt 1/3)
+2025-02-24 10:30:52,763 - WARNING - Login attempt 1 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:30:57,764 - INFO - Attempting to connect to login window (attempt 2/3)
+2025-02-24 10:30:57,994 - WARNING - Login attempt 2 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:31:02,995 - INFO - Attempting to connect to login window (attempt 3/3)
+2025-02-24 10:31:03,274 - WARNING - Login attempt 3 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:31:03,274 - ERROR - Login failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:31:03,274 - ERROR - Automation failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:31:06,822 - INFO - Browser session closed successfully

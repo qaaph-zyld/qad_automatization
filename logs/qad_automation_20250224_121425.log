@@ -1,0 +1,9 @@
+2025-02-24 12:14:32,487 - INFO - Edge WebDriver initialized successfully
+2025-02-24 12:14:32,488 - INFO - Starting QAD application...
+2025-02-24 12:14:33,860 - INFO - Launched QAD.Applications.exe
+2025-02-24 12:14:43,862 - INFO - Attempting to connect to QAD.Client (attempt 1/3)
+2025-02-24 12:14:46,760 - INFO - Found window: Login
+2025-02-24 12:14:49,534 - INFO - Login submitted to QAD.Client
+2025-02-24 12:15:04,136 - ERROR - Export to Excel failed: There are 4 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 12:15:04,136 - ERROR - Automation failed: There are 4 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 12:15:07,697 - INFO - Browser session closed successfully

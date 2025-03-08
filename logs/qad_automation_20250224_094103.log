@@ -1,0 +1,14 @@
+2025-02-24 09:41:09,896 - INFO - Edge WebDriver initialized successfully
+2025-02-24 09:41:09,897 - INFO - Navigating to QAD URL...
+2025-02-24 09:41:15,935 - INFO - Launched QAD application from shortcut
+2025-02-24 09:41:20,939 - INFO - Handled protocol dialog and QAD launch
+2025-02-24 09:41:41,142 - ERROR - Element #username not found within 20 seconds
+2025-02-24 09:42:01,545 - ERROR - Element input[name="username"] not found within 20 seconds
+2025-02-24 09:42:21,669 - ERROR - Element #txtUsername not found within 20 seconds
+2025-02-24 09:42:21,675 - ERROR - Login process failed: Message: Username field not found with any known selectors
+
+2025-02-24 09:42:21,680 - ERROR - Stacktrace:
+<traceback object at 0x00000190DB7F4600>
+2025-02-24 09:42:21,680 - ERROR - Automation failed: Message: Username field not found with any known selectors
+
+2025-02-24 09:42:25,567 - INFO - Browser session closed successfully

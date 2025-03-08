@@ -1,0 +1,12 @@
+2025-02-24 10:33:06,734 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:33:06,735 - INFO - Navigating to QAD URL...
+2025-02-24 10:33:08,576 - INFO - Launched QAD application from shortcut
+2025-02-24 10:33:18,577 - INFO - Attempting to connect to login window (attempt 1/3)
+2025-02-24 10:33:20,213 - WARNING - Login attempt 1 failed: {'title': 'QAD Login', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:33:25,214 - INFO - Attempting to connect to login window (attempt 2/3)
+2025-02-24 10:33:25,624 - WARNING - Login attempt 2 failed: {'title': 'QAD Login', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:33:30,625 - INFO - Attempting to connect to login window (attempt 3/3)
+2025-02-24 10:33:31,008 - WARNING - Login attempt 3 failed: {'title': 'QAD Login', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:33:31,010 - ERROR - Login failed: {'title': 'QAD Login', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:33:31,014 - ERROR - Automation failed: {'title': 'QAD Login', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:33:36,728 - INFO - Browser session closed successfully

@@ -1,0 +1,12 @@
+2025-02-24 10:25:41,262 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:25:41,262 - INFO - Navigating to QAD URL...
+2025-02-24 10:26:04,058 - WARNING - Protocol dialog handling failed: timed out
+2025-02-24 10:26:14,059 - INFO - Attempting to connect to login window (attempt 1/3)
+2025-02-24 10:26:14,876 - WARNING - Login attempt 1 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:26:19,881 - INFO - Attempting to connect to login window (attempt 2/3)
+2025-02-24 10:26:20,731 - WARNING - Login attempt 2 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:26:25,735 - INFO - Attempting to connect to login window (attempt 3/3)
+2025-02-24 10:26:26,033 - WARNING - Login attempt 3 failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:26:26,035 - ERROR - Login failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:26:26,036 - ERROR - Automation failed: There are 2 elements that match the criteria {'title_re': '.*QAD.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:26:29,159 - INFO - Browser session closed successfully

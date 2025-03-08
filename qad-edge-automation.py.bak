@@ -1,0 +1,473 @@
+import os
+import time
+import logging
+import argparse
+from pathlib import Path
+import subprocess
+import keyboard
+import tkinter as tk
+from tkinter import messagebox
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, WebDriverException
+import psutil
+from pywinauto import Application, Desktop
+from pywinauto.findwindows import find_windows
+from pywinauto.keyboard import send_keys
+from pywinauto.timings import wait_until, TimeoutError
+
+class QADAutomation:
+    def __init__(self, username: str, password: str, state_id: str = None, force: bool = False):
+        """
+        Initialize QAD automation
+        
+        Args:
+            username (str): QAD username
+            password (str): QAD password
+            state_id (str): Optional state ID for custom folder navigation
+            force (bool): Force execution even if QAD processes are running
+        """
+        self.username = username
+        self.password = password
+        self.state_id = state_id
+        self.force = force
+        self.logger = logging.getLogger(__name__)
+        
+        # Setup logging
+        self._setup_logging()
+        
+        # Check for existing QAD processes first (unless force is True)
+        if not self.force and not self._check_and_handle_existing_qad():
+            raise Exception("Please close all QAD windows and try again")
+            
+        # Initialize Edge WebDriver
+        self._setup_driver()
+        
+        # Initialize Edge WebDriver with specific options
+        edge_options = webdriver.EdgeOptions()
+        edge_options.use_chromium = True
+        edge_options.add_argument('--start-maximized')
+        
+        # Add protocol handler for qadsh
+        edge_options.add_argument('--protocol-handler.allowed-origin=qadsh://*')
+        edge_options.add_argument('--protocol-handler.excluded-schemes')
+        
+        self.driver = webdriver.Edge(options=edge_options)
+        self.logger.info("Edge WebDriver initialized successfully")
+    
+    def _setup_logging(self) -> None:
+        """
+        Set up logging configuration
+        """
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.StreamHandler()
+            ]
+        )
+    
+    def _check_and_handle_existing_qad(self) -> bool:
+        """
+        Check for existing QAD processes and show popup if found
+        Returns True if no QAD processes found or user closed them
+        """
+        qad_processes = [p for p in psutil.process_iter(['pid', 'name']) 
+                        if 'QAD.Client' in p.info['name']]
+        
+        if qad_processes:
+            # Create a tkinter root window
+            root = tk.Tk()
+            root.withdraw()  # Hide the root window
+            
+            # Show a message box
+            result = messagebox.askokcancel(
+                "QAD Processes Running",
+                f"Found {len(qad_processes)} QAD processes running.\n\n"
+                "Please close all QAD windows before continuing.\n\n"
+                "Click OK when you have closed all QAD windows, or Cancel to exit.",
+                icon=messagebox.WARNING
+            )
+            
+            root.destroy()
+            
+            if not result:
+                return False
+            
+            # Wait for processes to close
+            for _ in range(10):  # Try for 10 seconds
+                qad_processes = [p for p in psutil.process_iter(['pid', 'name']) 
+                                if 'QAD.Client' in p.info['name']]
+                if not qad_processes:
+                    return True
+                time.sleep(1)
+            
+            return False
+        
+        return True
+    
+    def _setup_driver(self) -> None:
+        """
+        Initialize Edge WebDriver with required options
+        """
+        try:
+            # Initialize Edge WebDriver with specific options
+            edge_options = webdriver.EdgeOptions()
+            edge_options.use_chromium = True
+            edge_options.add_argument('--start-maximized')
+            
+            # Add protocol handler for qadsh
+            edge_options.add_argument('--protocol-handler.allowed-origin=qadsh://*')
+            edge_options.add_argument('--protocol-handler.excluded-schemes')
+            
+            self.driver = webdriver.Edge(options=edge_options)
+            self.logger.info("Edge WebDriver initialized successfully")
+        except Exception as e:
+            self.logger.error(f"Failed to initialize Edge WebDriver: {str(e)}")
+            raise
+    
+    def setup_driver(self) -> None:
+        """
+        Configure and initialize Edge WebDriver with appropriate settings
+        """
+        try:
+            # Initialize Edge WebDriver with specific options
+            edge_options = webdriver.EdgeOptions()
+            edge_options.use_chromium = True
+            edge_options.add_argument('--start-maximized')
+            
+            # Add protocol handler for qadsh
+            edge_options.add_argument('--protocol-handler.allowed-origin=qadsh://*')
+            edge_options.add_argument('--protocol-handler.excluded-schemes')
+            
+            self.driver = webdriver.Edge(options=edge_options)
+            self.logger.info("Edge WebDriver initialized successfully")
+        except Exception as e:
+            self.logger.error(f"Failed to initialize Edge WebDriver: {str(e)}")
+            raise
+    
+    def wait_for_element(self, by: By, value: str, timeout: int = 20):
+        """
+        Wait for element to be clickable with explicit timeout
+        
+        Args:
+            by: Selenium By locator strategy
+            value: Element identifier
+            timeout: Maximum wait time in seconds
+        """
+        try:
+            element = WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable((by, value))
+            )
+            return element
+        except TimeoutException:
+            self.logger.error(f"Timeout waiting for element: {value}")
+            raise
+    
+    def _find_login_window(self, timeout=30):
+        """
+        Find the QAD login window and return the window and app objects
+        """
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            try:
+                # Look for windows with "Login" in the title
+                windows = find_windows(title_re=".*Login.*")
+                if windows:
+                    window_handle = windows[0]
+                    app = Application().connect(handle=window_handle)
+                    window = app.window(handle=window_handle)
+                    self.logger.info(f"Found window with title pattern: {window.window_text()}")
+                    return app, window
+            except Exception as e:
+                self.logger.debug(f"Error finding login window: {str(e)}")
+            
+            time.sleep(2)
+        
+        self.logger.error("Could not find QAD login window")
+        return None, None
+    
+    def _handle_protocol_dialog(self) -> bool:
+        """
+        Handle the protocol dialog that appears when opening QAD via URL
+        Returns True if successful, False otherwise
+        """
+        try:
+            self.logger.info("STEP 2: Waiting for protocol dialog to appear...")
+            time.sleep(5)  # Wait for dialog to appear
+            
+            # Try multiple key combinations to handle the dialog
+            for attempt in range(3):
+                self.logger.info(f"Protocol dialog handling attempt {attempt + 1}/3")
+                
+                # Method 1: Try using Tab and Enter
+                self.logger.info("STEP 3: Pressing Tab to focus on Open button...")
+                keyboard.send_keys('{TAB}')
+                time.sleep(1)
+                
+                self.logger.info("STEP 4: Pressing Enter to click Open...")
+                keyboard.send_keys('{ENTER}')
+                time.sleep(2)
+                
+                # Method 2: Try Alt+O for Open
+                if attempt >= 1:
+                    self.logger.info("Trying Alt+O shortcut...")
+                    keyboard.send_keys('%o')  # Alt+O
+                    time.sleep(2)
+                
+                # Method 3: Try different key combinations
+                if attempt >= 2:
+                    self.logger.info("Trying additional key combinations...")
+                    # Try Space
+                    keyboard.send_keys(' ')
+                    time.sleep(1)
+                    # Try Enter again
+                    keyboard.send_keys('{ENTER}')
+                    time.sleep(1)
+                    # Try Tab + Enter again
+                    keyboard.send_keys('{TAB}{ENTER}')
+                    time.sleep(1)
+                
+                # Verify QAD window appears
+                self.logger.info("STEP 5: Verifying QAD window appears...")
+                start_time = time.time()
+                while time.time() - start_time < 30:  # Wait up to 30 seconds
+                    try:
+                        # Check for QAD window
+                        qad_windows = self._check_existing_qad_windows()
+                        if qad_windows > 0:
+                            self.logger.info("SUCCESS: QAD window detected")
+                            return True
+                    except:
+                        pass
+                    
+                    time.sleep(2)
+                
+                # If we're still here, the dialog may not have been handled correctly
+                if attempt < 2:
+                    self.logger.warning(f"Protocol dialog handling attempt {attempt + 1} failed, trying again...")
+                    time.sleep(2)
+            
+            self.logger.error("FAILED: QAD window not detected after protocol handling")
+            return False
+            
+        except Exception as e:
+            self.logger.error(f"Error handling protocol dialog: {str(e)}")
+            return False
+    
+    def _verify_qad_window_exists(self, timeout=30) -> bool:
+        """
+        Verify that QAD window exists
+        """
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            try:
+                # Check for QAD window
+                qad_windows = self._check_existing_qad_windows()
+                if qad_windows > 0:
+                    self.logger.info("QAD window verified")
+                    return True
+            except Exception as e:
+                self.logger.debug(f"Error verifying QAD window: {str(e)}")
+            
+            time.sleep(2)
+        
+        self.logger.error("QAD window verification failed")
+        return False
+    
+    def login(self) -> None:
+        """
+        Log into the QAD desktop application using URL protocol
+        """
+        try:
+            self.logger.info("STEP 1: Starting QAD application via URL protocol...")
+            
+            # Check for existing QAD windows
+            existing_windows = self._check_existing_qad_windows()
+            self.logger.info(f"Found {existing_windows} existing QAD windows")
+            
+            # Open QAD using URL protocol
+            self.logger.info(f"Opening QAD with state ID: {self.state_id}")
+            
+            # Set up Edge for QAD protocol
+            self.logger.info("Setting up Edge for QAD protocol...")
+            
+            # Navigate to QAD URL with state ID
+            qad_url = f"qadsh://browse/invoke?state-id={self.state_id}"
+            self.logger.info(f"Navigating to QAD URL: {qad_url}")
+            self.driver.get(qad_url)
+            self.logger.info("Successfully navigated to QAD URL")
+            
+            # Handle the protocol dialog
+            if not self._handle_protocol_dialog():
+                raise Exception("Failed to handle protocol dialog")
+            
+            # Wait for QAD login window
+            self.logger.info("STEP 6: Waiting for QAD login window...")
+            time.sleep(15)  # Wait for login window to appear
+            
+            # Try to connect to the login window multiple times
+            app = None
+            window = None
+            
+            for attempt in range(3):
+                self.logger.info(f"STEP 7: Attempting to connect to QAD login window (attempt {attempt + 1}/3)")
+                app, window = self._find_login_window()
+                if window:
+                    break
+                time.sleep(2)
+            
+            if not window:
+                raise Exception("Could not find QAD login window")
+            
+            # Enter credentials
+            self.logger.info("STEP 8: Found login window, entering credentials...")
+            
+            # Find username and password fields
+            username_field = window.child_window(class_name="Edit", control_id=1)
+            password_field = window.child_window(class_name="Edit", control_id=2)
+            
+            # Enter username
+            username_field.set_focus()
+            username_field.type_keys(self.username)
+            self.logger.info("STEP 9: Username entered, moving to password...")
+            
+            # Enter password
+            password_field.set_focus()
+            password_field.type_keys(self.password)
+            self.logger.info("STEP 10: Submitting login form...")
+            
+            # Press Enter to submit
+            keyboard.send_keys('{ENTER}')
+            
+            # Wait for main window to appear
+            self.logger.info("Waiting for main window to appear after login...")
+            time.sleep(20)  # Adjust this timeout as needed
+            
+            self.logger.info("SUCCESS: Login sequence completed")
+            
+        except Exception as e:
+            self.logger.error(f"Login failed: {str(e)}")
+            raise
+    
+    def _check_existing_qad_windows(self) -> int:
+        """
+        Check for existing QAD.Client windows and return the count
+        """
+        try:
+            windows = find_windows(title_re=".*QAD Enterprise Applications.*")
+            return len(windows)
+        except Exception as e:
+            self.logger.debug(f"Error checking for QAD windows: {str(e)}")
+            return 0
+    
+    def export_to_excel(self) -> None:
+        """
+        Export data to Excel using the QAD desktop app
+        """
+        try:
+            self.logger.info("STEP 11: Starting Excel export process...")
+            time.sleep(2)  # Give some time for QAD to fully load
+            
+            # Find QAD windows
+            windows = find_windows(title_re=".*QAD Enterprise Applications.*")
+            self.logger.info(f"Found {len(windows)} QAD windows")
+            
+            if not windows:
+                raise Exception("No QAD windows found")
+            
+            # Connect to the main QAD window
+            main_window = None
+            for handle in windows:
+                try:
+                    app = Application().connect(handle=handle)
+                    window = app.window(handle=handle)
+                    self.logger.info(f"Found window: {window.window_text()}")
+                    main_window = window
+                    break
+                except Exception as e:
+                    self.logger.warning(f"Error connecting to window: {str(e)}")
+            
+            if not main_window:
+                raise Exception("Could not connect to QAD main window")
+            
+            self.logger.info(f"Selected main window: {main_window.window_text()}")
+            
+            # Start the export sequence
+            self.logger.info("STEP 12: Starting export sequence...")
+            
+            # Focus the window
+            main_window.set_focus()
+            time.sleep(2)
+            
+            # Press Alt to open menu
+            self.logger.info("Pressing Alt key...")
+            keyboard.send_keys('%')
+            time.sleep(1)
+            
+            # Press Enter to select first menu item
+            self.logger.info("Pressing Enter...")
+            keyboard.send_keys('{ENTER}')
+            time.sleep(1)
+            
+            # Press Down Arrow and Enter to navigate to export
+            self.logger.info("Pressing Down Arrow and Enter...")
+            keyboard.send_keys('{DOWN}{ENTER}')
+            time.sleep(1)
+            
+            # Press Down Arrow and Enter again for Excel export
+            self.logger.info("Pressing Down Arrow and Enter again...")
+            keyboard.send_keys('{DOWN}{ENTER}')
+            time.sleep(0.1)
+            
+            # Wait for Excel file to open
+            self.logger.info("Waiting for Excel file to open...")
+            time.sleep(5)  # Adjust this timeout as needed
+            
+            self.logger.info("SUCCESS: Export sequence completed")
+            
+        except Exception as e:
+            self.logger.error(f"Export to Excel failed: {str(e)}")
+            raise
+
+    def cleanup(self) -> None:
+        """
+        Clean up resources and close browser
+        """
+        try:
+            if hasattr(self, 'driver'):
+                self.driver.quit()
+                self.logger.info("Browser session closed successfully")
+        except Exception as e:
+            self.logger.error(f"Cleanup failed: {str(e)}")
+
+def main():
+    """
+    Main entry point
+    """
+    parser = argparse.ArgumentParser(description='QAD Automation Script')
+    parser.add_argument('--username', type=str, help='QAD username')
+    parser.add_argument('--password', type=str, help='QAD password')
+    parser.add_argument('--state-id', type=str, help='QAD state ID for custom folder navigation')
+    parser.add_argument('--force', action='store_true', help='Force execution even if QAD processes are running')
+    
+    args = parser.parse_args()
+    
+    # Get credentials from environment if not provided
+    username = args.username or os.getenv('QAD_USERNAME')
+    password = args.password or os.getenv('QAD_PASSWORD')
+    
+    if not username or not password:
+        raise ValueError("Username and password must be provided either as arguments or environment variables")
+    
+    try:
+        qad = QADAutomation(username, password, args.state_id, args.force)
+        qad.login()
+        qad.export_to_excel()
+    except Exception as e:
+        logging.error(f"Automation failed: {str(e)}")
+
+if __name__ == "__main__":
+    main()

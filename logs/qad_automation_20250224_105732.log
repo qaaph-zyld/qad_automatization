@@ -1,0 +1,21 @@
+2025-02-24 10:57:38,200 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:57:38,200 - INFO - Starting QAD application...
+2025-02-24 10:57:41,165 - INFO - Launched QAD.Applications.exe
+2025-02-24 10:57:51,166 - INFO - Attempting to connect to QAD.Client (attempt 1/3)
+2025-02-24 10:57:59,214 - INFO - Found window: Login
+2025-02-24 10:57:59,768 - INFO - Child element:  (Pane)
+2025-02-24 10:57:59,768 - INFO - Child element:  (TitleBar)
+2025-02-24 10:58:05,234 - WARNING - Login attempt 1 failed: {'auto_id': 'txtUsername', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 6099280>, 'backend': 'uia'}
+2025-02-24 10:58:10,237 - INFO - Attempting to connect to QAD.Client (attempt 2/3)
+2025-02-24 10:58:13,076 - INFO - Found window: Login
+2025-02-24 10:58:13,340 - INFO - Child element:  (Pane)
+2025-02-24 10:58:13,340 - INFO - Child element:  (TitleBar)
+2025-02-24 10:58:18,501 - WARNING - Login attempt 2 failed: {'auto_id': 'txtUsername', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 6099280>, 'backend': 'uia'}
+2025-02-24 10:58:23,505 - INFO - Attempting to connect to QAD.Client (attempt 3/3)
+2025-02-24 10:58:26,757 - INFO - Found window: Login
+2025-02-24 10:58:27,033 - INFO - Child element:  (Pane)
+2025-02-24 10:58:27,033 - INFO - Child element:  (TitleBar)
+2025-02-24 10:58:32,103 - WARNING - Login attempt 3 failed: {'auto_id': 'txtUsername', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 6099280>, 'backend': 'uia'}
+2025-02-24 10:58:32,105 - ERROR - Login failed: {'auto_id': 'txtUsername', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 6099280>, 'backend': 'uia'}
+2025-02-24 10:58:32,108 - ERROR - Automation failed: {'auto_id': 'txtUsername', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 6099280>, 'backend': 'uia'}
+2025-02-24 10:58:37,109 - INFO - Browser session closed successfully

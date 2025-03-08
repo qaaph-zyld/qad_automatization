@@ -1,0 +1,15 @@
+2025-02-24 12:50:59,233 - INFO - Edge WebDriver initialized successfully
+2025-02-24 12:50:59,234 - INFO - Starting QAD application via URL protocol...
+2025-02-24 12:51:05,796 - INFO - Found 1 existing QAD windows
+2025-02-24 12:51:05,804 - INFO - Opening QAD with state ID: d81588f8-246f-42f2-88aa-7aacc9dfb366
+2025-02-24 12:51:05,839 - INFO - Navigated to QAD URL: qadsh://browse/invoke?state-id=d81588f8-246f-42f2-88aa-7aacc9dfb366
+2025-02-24 12:51:05,839 - INFO - Waiting for protocol dialog...
+2025-02-24 12:51:17,843 - WARNING - Protocol dialog handling failed: 
+2025-02-24 12:51:27,847 - INFO - Attempting to connect to QAD.Client (attempt 1/3)
+2025-02-24 12:51:29,127 - WARNING - Login attempt 1 failed: New QAD window not found
+2025-02-24 12:51:34,130 - INFO - Attempting to connect to QAD.Client (attempt 2/3)
+2025-02-24 12:51:35,353 - WARNING - Login attempt 2 failed: New QAD window not found
+2025-02-24 12:51:40,354 - INFO - Attempting to connect to QAD.Client (attempt 3/3)
+2025-02-24 12:51:41,840 - WARNING - Login attempt 3 failed: New QAD window not found
+2025-02-24 12:51:41,840 - ERROR - Login failed: New QAD window not found
+2025-02-24 12:51:41,840 - ERROR - Automation failed: New QAD window not found

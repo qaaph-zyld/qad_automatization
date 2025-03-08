@@ -1,0 +1,12 @@
+2025-02-24 10:55:19,414 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:55:19,417 - INFO - Navigating to QAD URL...
+2025-02-24 10:55:21,869 - INFO - Launched QAD application from shortcut
+2025-02-24 10:55:31,872 - INFO - Attempting to connect to login window (attempt 1/3)
+2025-02-24 10:55:40,974 - WARNING - Login attempt 1 failed: {'title': 'User:', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 3082756>, 'backend': 'uia'}
+2025-02-24 10:55:45,977 - INFO - Attempting to connect to login window (attempt 2/3)
+2025-02-24 10:55:54,604 - WARNING - Login attempt 2 failed: {'title': 'User:', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 3082756>, 'backend': 'uia'}
+2025-02-24 10:55:59,604 - INFO - Attempting to connect to login window (attempt 3/3)
+2025-02-24 10:56:11,940 - WARNING - Login attempt 3 failed: {'title': 'User:', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 3082756>, 'backend': 'uia'}
+2025-02-24 10:56:11,944 - ERROR - Login failed: {'title': 'User:', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 3082756>, 'backend': 'uia'}
+2025-02-24 10:56:11,946 - ERROR - Automation failed: {'title': 'User:', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Login', WindowsForms10.Window.8.app.0.20f9772_r9_ad1, 3082756>, 'backend': 'uia'}
+2025-02-24 10:56:14,833 - INFO - Browser session closed successfully

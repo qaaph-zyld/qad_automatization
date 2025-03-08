@@ -1,0 +1,6 @@
+2025-02-24 10:10:04,076 - INFO - Edge WebDriver initialized successfully
+2025-02-24 10:10:04,077 - INFO - Navigating to QAD URL...
+2025-02-24 10:10:26,611 - WARNING - Protocol dialog handling failed: timed out
+2025-02-24 10:10:31,901 - ERROR - Login failed: {'title_re': '.*QAD.*Login.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:10:31,901 - ERROR - Automation failed: {'title_re': '.*QAD.*Login.*', 'backend': 'uia', 'visible_only': False}
+2025-02-24 10:10:35,624 - INFO - Browser session closed successfully

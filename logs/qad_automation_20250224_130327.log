@@ -1,0 +1,82 @@
+2025-02-24 13:04:54,298 - INFO - Edge WebDriver initialized successfully
+2025-02-24 13:04:54,313 - INFO - Starting QAD application via URL protocol...
+2025-02-24 13:05:05,365 - INFO - Found 0 existing QAD windows
+2025-02-24 13:05:05,370 - INFO - Opening QAD with state ID: d81588f8-246f-42f2-88aa-7aacc9dfb366
+2025-02-24 13:05:20,575 - ERROR - Failed to navigate to URL: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=133.0.3065.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EA45E735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA6EB1B4+2060276]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA642338+1368440]
+	(No symbol) [0x00007FF7EA1D9510]
+	(No symbol) [0x00007FF7EA1F70CA]
+	(No symbol) [0x00007FF7EA25A0E6]
+	(No symbol) [0x00007FF7EA2713AD]
+	(No symbol) [0x00007FF7EA253FC3]
+	(No symbol) [0x00007FF7EA228B96]
+	(No symbol) [0x00007FF7EA227E50]
+	(No symbol) [0x00007FF7EA2289C3]
+	(No symbol) [0x00007FF7EA2B0214]
+	(No symbol) [0x00007FF7EA3406CF]
+	(No symbol) [0x00007FF7EA2B3A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7EA7A45BD+279981]
+	simdutf::get_active_implementation [0x00007FF7EA3E78C1+409457]
+	simdutf::get_active_implementation [0x00007FF7EA3E2BA4+389716]
+	simdutf::get_active_implementation [0x00007FF7EA3E2CE9+390041]
+	simdutf::get_active_implementation [0x00007FF7EA3D62E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 13:05:20,579 - ERROR - Login failed: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=133.0.3065.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EA45E735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA6EB1B4+2060276]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA642338+1368440]
+	(No symbol) [0x00007FF7EA1D9510]
+	(No symbol) [0x00007FF7EA1F70CA]
+	(No symbol) [0x00007FF7EA25A0E6]
+	(No symbol) [0x00007FF7EA2713AD]
+	(No symbol) [0x00007FF7EA253FC3]
+	(No symbol) [0x00007FF7EA228B96]
+	(No symbol) [0x00007FF7EA227E50]
+	(No symbol) [0x00007FF7EA2289C3]
+	(No symbol) [0x00007FF7EA2B0214]
+	(No symbol) [0x00007FF7EA3406CF]
+	(No symbol) [0x00007FF7EA2B3A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7EA7A45BD+279981]
+	simdutf::get_active_implementation [0x00007FF7EA3E78C1+409457]
+	simdutf::get_active_implementation [0x00007FF7EA3E2BA4+389716]
+	simdutf::get_active_implementation [0x00007FF7EA3E2CE9+390041]
+	simdutf::get_active_implementation [0x00007FF7EA3D62E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 13:05:20,580 - ERROR - Automation failed: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=133.0.3065.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EA45E735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA6EB1B4+2060276]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF7EA642338+1368440]
+	(No symbol) [0x00007FF7EA1D9510]
+	(No symbol) [0x00007FF7EA1F70CA]
+	(No symbol) [0x00007FF7EA25A0E6]
+	(No symbol) [0x00007FF7EA2713AD]
+	(No symbol) [0x00007FF7EA253FC3]
+	(No symbol) [0x00007FF7EA228B96]
+	(No symbol) [0x00007FF7EA227E50]
+	(No symbol) [0x00007FF7EA2289C3]
+	(No symbol) [0x00007FF7EA2B0214]
+	(No symbol) [0x00007FF7EA3406CF]
+	(No symbol) [0x00007FF7EA2B3A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7EA7A45BD+279981]
+	simdutf::get_active_implementation [0x00007FF7EA3E78C1+409457]
+	simdutf::get_active_implementation [0x00007FF7EA3E2BA4+389716]
+	simdutf::get_active_implementation [0x00007FF7EA3E2CE9+390041]
+	simdutf::get_active_implementation [0x00007FF7EA3D62E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+

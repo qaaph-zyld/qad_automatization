@@ -1,0 +1,63 @@
+2025-02-24 09:40:30,788 - INFO - Edge WebDriver initialized successfully
+2025-02-24 09:40:30,791 - INFO - Navigating to QAD URL...
+2025-02-24 09:40:30,803 - ERROR - Login process failed: Message: invalid argument
+  (Session info: MicrosoftEdge=133.0.3065.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6EE21E735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6EE4AB1B4+2060276]
+	(No symbol) [0x00007FF6EDFA9405]
+	(No symbol) [0x00007FF6EDF99E22]
+	(No symbol) [0x00007FF6EDF98903]
+	(No symbol) [0x00007FF6EDF98DBC]
+	(No symbol) [0x00007FF6EDFAC8FA]
+	(No symbol) [0x00007FF6EE03213E]
+	(No symbol) [0x00007FF6EE01425A]
+	(No symbol) [0x00007FF6EDFE964D]
+	(No symbol) [0x00007FF6EE031C00]
+	(No symbol) [0x00007FF6EE013FC3]
+	(No symbol) [0x00007FF6EDFE8B96]
+	(No symbol) [0x00007FF6EDFE7E50]
+	(No symbol) [0x00007FF6EDFE89C3]
+	(No symbol) [0x00007FF6EE070214]
+	(No symbol) [0x00007FF6EE1006CF]
+	(No symbol) [0x00007FF6EE073A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6EE5645BD+279981]
+	simdutf::get_active_implementation [0x00007FF6EE1A78C1+409457]
+	simdutf::get_active_implementation [0x00007FF6EE1A2BA4+389716]
+	simdutf::get_active_implementation [0x00007FF6EE1A2CE9+390041]
+	simdutf::get_active_implementation [0x00007FF6EE1962E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 09:40:30,805 - ERROR - Stacktrace:
+<traceback object at 0x00000230D503F640>
+2025-02-24 09:40:30,807 - ERROR - Automation failed: Message: invalid argument
+  (Session info: MicrosoftEdge=133.0.3065.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6EE21E735+13397]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6EE4AB1B4+2060276]
+	(No symbol) [0x00007FF6EDFA9405]
+	(No symbol) [0x00007FF6EDF99E22]
+	(No symbol) [0x00007FF6EDF98903]
+	(No symbol) [0x00007FF6EDF98DBC]
+	(No symbol) [0x00007FF6EDFAC8FA]
+	(No symbol) [0x00007FF6EE03213E]
+	(No symbol) [0x00007FF6EE01425A]
+	(No symbol) [0x00007FF6EDFE964D]
+	(No symbol) [0x00007FF6EE031C00]
+	(No symbol) [0x00007FF6EE013FC3]
+	(No symbol) [0x00007FF6EDFE8B96]
+	(No symbol) [0x00007FF6EDFE7E50]
+	(No symbol) [0x00007FF6EDFE89C3]
+	(No symbol) [0x00007FF6EE070214]
+	(No symbol) [0x00007FF6EE1006CF]
+	(No symbol) [0x00007FF6EE073A53]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6EE5645BD+279981]
+	simdutf::get_active_implementation [0x00007FF6EE1A78C1+409457]
+	simdutf::get_active_implementation [0x00007FF6EE1A2BA4+389716]
+	simdutf::get_active_implementation [0x00007FF6EE1A2CE9+390041]
+	simdutf::get_active_implementation [0x00007FF6EE1962E6+338326]
+	BaseThreadInitThunk [0x00007FFEAA32259D+29]
+	RtlUserThreadStart [0x00007FFEABCEAF38+40]
+
+2025-02-24 09:40:35,578 - INFO - Browser session closed successfully

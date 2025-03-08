@@ -1,0 +1,195 @@
+2025-02-24 12:08:58,403 - INFO - Edge WebDriver initialized successfully
+2025-02-24 12:08:58,403 - INFO - Starting QAD application...
+2025-02-24 12:08:59,892 - INFO - Launched QAD.Applications.exe
+2025-02-24 12:09:09,894 - INFO - Attempting to connect to QAD.Client (attempt 1/3)
+2025-02-24 12:09:14,470 - INFO - Found window: Login
+2025-02-24 12:09:14,490 - INFO - Control: Login (Window)
+2025-02-24 12:09:14,500 - INFO - Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:14,512 - INFO - Auto ID: LoginForm
+2025-02-24 12:09:14,908 - INFO -   Control:  (Pane)
+2025-02-24 12:09:14,909 - INFO -   Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:14,911 - INFO -   Auto ID: pnlMain
+2025-02-24 12:09:15,032 - INFO -     Control: Log on to: (Text)
+2025-02-24 12:09:15,033 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,037 - INFO -     Auto ID: _lblLogOnTo
+2025-02-24 12:09:15,044 - INFO -     Control:  (ComboBox)
+2025-02-24 12:09:15,045 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,046 - INFO -     Auto ID: _cmbLogOnTo
+2025-02-24 12:09:15,133 - INFO -       Control:  (ComboBox)
+2025-02-24 12:09:15,134 - INFO -       Class name: 
+2025-02-24 12:09:15,137 - INFO -       Auto ID: 
+2025-02-24 12:09:15,236 - INFO -         Control: Open (SplitButton)
+2025-02-24 12:09:15,243 - INFO -         Class name: 
+2025-02-24 12:09:15,246 - INFO -         Auto ID: 
+2025-02-24 12:09:15,255 - INFO -         Control: List (List)
+2025-02-24 12:09:15,257 - INFO -         Class name: 
+2025-02-24 12:09:15,259 - INFO -         Auto ID: 
+2025-02-24 12:09:15,274 - INFO -     Control: Cancel (Button)
+2025-02-24 12:09:15,276 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,278 - INFO -     Auto ID: _btnCancel
+2025-02-24 12:09:15,286 - INFO -     Control: Password: (Text)
+2025-02-24 12:09:15,289 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,293 - INFO -     Auto ID: _lblPassword
+2025-02-24 12:09:15,301 - INFO -     Control:  (Pane)
+2025-02-24 12:09:15,303 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,306 - INFO -     Auto ID: _txtPassword
+2025-02-24 12:09:15,325 - INFO -       Control:  (Custom)
+2025-02-24 12:09:15,326 - INFO -       Class name: 
+2025-02-24 12:09:15,328 - INFO -       Auto ID: 
+2025-02-24 12:09:15,334 - INFO -     Control: OK (Button)
+2025-02-24 12:09:15,336 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,340 - INFO -     Auto ID: _btnOK
+2025-02-24 12:09:15,348 - INFO -     Control:  (Pane)
+2025-02-24 12:09:15,350 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,351 - INFO -     Auto ID: _txtUserName
+2025-02-24 12:09:15,394 - INFO -       Control:  (Edit)
+2025-02-24 12:09:15,395 - INFO -       Class name: WindowsForms10.EDIT.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,396 - INFO -       Auto ID: 6426922
+2025-02-24 12:09:15,407 - INFO -       Control:  (Custom)
+2025-02-24 12:09:15,409 - INFO -       Class name: 
+2025-02-24 12:09:15,411 - INFO -       Auto ID: 
+2025-02-24 12:09:15,416 - INFO -     Control: User: (Text)
+2025-02-24 12:09:15,417 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:15,418 - INFO -     Auto ID: _lblUserName
+2025-02-24 12:09:15,426 - INFO -   Control:  (TitleBar)
+2025-02-24 12:09:15,426 - INFO -   Class name: 
+2025-02-24 12:09:15,426 - INFO -   Auto ID: 
+2025-02-24 12:09:15,600 - INFO -     Control: System (MenuBar)
+2025-02-24 12:09:15,601 - INFO -     Class name: 
+2025-02-24 12:09:15,601 - INFO -     Auto ID: MenuBar
+2025-02-24 12:09:15,910 - INFO -       Control: System (MenuItem)
+2025-02-24 12:09:15,911 - INFO -       Class name: 
+2025-02-24 12:09:15,911 - INFO -       Auto ID: 
+2025-02-24 12:09:15,969 - INFO -     Control: Close (Button)
+2025-02-24 12:09:15,970 - INFO -     Class name: 
+2025-02-24 12:09:15,970 - INFO -     Auto ID: 
+2025-02-24 12:09:16,028 - WARNING - Login attempt 1 failed: Expected 2 edit controls, found 0
+2025-02-24 12:09:21,029 - INFO - Attempting to connect to QAD.Client (attempt 2/3)
+2025-02-24 12:09:23,628 - INFO - Found window: Login
+2025-02-24 12:09:23,640 - INFO - Control: Login (Window)
+2025-02-24 12:09:23,651 - INFO - Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,658 - INFO - Auto ID: LoginForm
+2025-02-24 12:09:23,699 - INFO -   Control:  (Pane)
+2025-02-24 12:09:23,706 - INFO -   Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,707 - INFO -   Auto ID: pnlMain
+2025-02-24 12:09:23,769 - INFO -     Control: Log on to: (Text)
+2025-02-24 12:09:23,770 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,771 - INFO -     Auto ID: _lblLogOnTo
+2025-02-24 12:09:23,775 - INFO -     Control:  (ComboBox)
+2025-02-24 12:09:23,775 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,776 - INFO -     Auto ID: _cmbLogOnTo
+2025-02-24 12:09:23,788 - INFO -       Control:  (ComboBox)
+2025-02-24 12:09:23,792 - INFO -       Class name: 
+2025-02-24 12:09:23,794 - INFO -       Auto ID: 
+2025-02-24 12:09:23,837 - INFO -         Control: Open (SplitButton)
+2025-02-24 12:09:23,839 - INFO -         Class name: 
+2025-02-24 12:09:23,839 - INFO -         Auto ID: 
+2025-02-24 12:09:23,843 - INFO -         Control: List (List)
+2025-02-24 12:09:23,843 - INFO -         Class name: 
+2025-02-24 12:09:23,845 - INFO -         Auto ID: 
+2025-02-24 12:09:23,852 - INFO -     Control: Cancel (Button)
+2025-02-24 12:09:23,852 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,853 - INFO -     Auto ID: _btnCancel
+2025-02-24 12:09:23,858 - INFO -     Control: Password: (Text)
+2025-02-24 12:09:23,859 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,861 - INFO -     Auto ID: _lblPassword
+2025-02-24 12:09:23,870 - INFO -     Control:  (Pane)
+2025-02-24 12:09:23,871 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,872 - INFO -     Auto ID: _txtPassword
+2025-02-24 12:09:23,880 - INFO -       Control:  (Custom)
+2025-02-24 12:09:23,882 - INFO -       Class name: 
+2025-02-24 12:09:23,882 - INFO -       Auto ID: 
+2025-02-24 12:09:23,886 - INFO -     Control: OK (Button)
+2025-02-24 12:09:23,886 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,888 - INFO -     Auto ID: _btnOK
+2025-02-24 12:09:23,891 - INFO -     Control:  (Pane)
+2025-02-24 12:09:23,892 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,893 - INFO -     Auto ID: _txtUserName
+2025-02-24 12:09:23,909 - INFO -       Control:  (Edit)
+2025-02-24 12:09:23,910 - INFO -       Class name: WindowsForms10.EDIT.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,911 - INFO -       Auto ID: 6426922
+2025-02-24 12:09:23,918 - INFO -       Control:  (Custom)
+2025-02-24 12:09:23,919 - INFO -       Class name: 
+2025-02-24 12:09:23,919 - INFO -       Auto ID: 
+2025-02-24 12:09:23,923 - INFO -     Control: User: (Text)
+2025-02-24 12:09:23,923 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:23,924 - INFO -     Auto ID: _lblUserName
+2025-02-24 12:09:23,927 - INFO -   Control:  (TitleBar)
+2025-02-24 12:09:23,927 - INFO -   Class name: 
+2025-02-24 12:09:23,927 - INFO -   Auto ID: 
+2025-02-24 12:09:24,005 - INFO -     Control: System (MenuBar)
+2025-02-24 12:09:24,006 - INFO -     Class name: 
+2025-02-24 12:09:24,006 - INFO -     Auto ID: MenuBar
+2025-02-24 12:09:24,190 - INFO -       Control: System (MenuItem)
+2025-02-24 12:09:24,190 - INFO -       Class name: 
+2025-02-24 12:09:24,190 - INFO -       Auto ID: 
+2025-02-24 12:09:24,232 - INFO -     Control: Close (Button)
+2025-02-24 12:09:24,232 - INFO -     Class name: 
+2025-02-24 12:09:24,234 - INFO -     Auto ID: 
+2025-02-24 12:09:24,295 - WARNING - Login attempt 2 failed: Expected 2 edit controls, found 0
+2025-02-24 12:09:29,296 - INFO - Attempting to connect to QAD.Client (attempt 3/3)
+2025-02-24 12:09:32,078 - INFO - Found window: Login
+2025-02-24 12:09:32,095 - INFO - Control: Login (Window)
+2025-02-24 12:09:32,104 - INFO - Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,113 - INFO - Auto ID: LoginForm
+2025-02-24 12:09:32,158 - INFO -   Control:  (Pane)
+2025-02-24 12:09:32,159 - INFO -   Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,160 - INFO -   Auto ID: pnlMain
+2025-02-24 12:09:32,231 - INFO -     Control: Log on to: (Text)
+2025-02-24 12:09:32,232 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,233 - INFO -     Auto ID: _lblLogOnTo
+2025-02-24 12:09:32,241 - INFO -     Control:  (ComboBox)
+2025-02-24 12:09:32,242 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,243 - INFO -     Auto ID: _cmbLogOnTo
+2025-02-24 12:09:32,259 - INFO -       Control:  (ComboBox)
+2025-02-24 12:09:32,261 - INFO -       Class name: 
+2025-02-24 12:09:32,262 - INFO -       Auto ID: 
+2025-02-24 12:09:32,284 - INFO -         Control: Open (SplitButton)
+2025-02-24 12:09:32,287 - INFO -         Class name: 
+2025-02-24 12:09:32,290 - INFO -         Auto ID: 
+2025-02-24 12:09:32,296 - INFO -         Control: List (List)
+2025-02-24 12:09:32,298 - INFO -         Class name: 
+2025-02-24 12:09:32,299 - INFO -         Auto ID: 
+2025-02-24 12:09:32,304 - INFO -     Control: Cancel (Button)
+2025-02-24 12:09:32,305 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,308 - INFO -     Auto ID: _btnCancel
+2025-02-24 12:09:32,314 - INFO -     Control: Password: (Text)
+2025-02-24 12:09:32,314 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,316 - INFO -     Auto ID: _lblPassword
+2025-02-24 12:09:32,324 - INFO -     Control:  (Pane)
+2025-02-24 12:09:32,324 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,327 - INFO -     Auto ID: _txtPassword
+2025-02-24 12:09:32,335 - INFO -       Control:  (Custom)
+2025-02-24 12:09:32,336 - INFO -       Class name: 
+2025-02-24 12:09:32,338 - INFO -       Auto ID: 
+2025-02-24 12:09:32,345 - INFO -     Control: OK (Button)
+2025-02-24 12:09:32,346 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,347 - INFO -     Auto ID: _btnOK
+2025-02-24 12:09:32,352 - INFO -     Control:  (Pane)
+2025-02-24 12:09:32,353 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,354 - INFO -     Auto ID: _txtUserName
+2025-02-24 12:09:32,377 - INFO -       Control:  (Edit)
+2025-02-24 12:09:32,378 - INFO -       Class name: WindowsForms10.EDIT.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,379 - INFO -       Auto ID: 6426922
+2025-02-24 12:09:32,384 - INFO -       Control:  (Custom)
+2025-02-24 12:09:32,385 - INFO -       Class name: 
+2025-02-24 12:09:32,386 - INFO -       Auto ID: 
+2025-02-24 12:09:32,393 - INFO -     Control: User: (Text)
+2025-02-24 12:09:32,394 - INFO -     Class name: WindowsForms10.Window.8.app.0.20f9772_r9_ad1
+2025-02-24 12:09:32,395 - INFO -     Auto ID: _lblUserName
+2025-02-24 12:09:32,398 - INFO -   Control:  (TitleBar)
+2025-02-24 12:09:32,398 - INFO -   Class name: 
+2025-02-24 12:09:32,399 - INFO -   Auto ID: 
+2025-02-24 12:09:32,487 - INFO -     Control: System (MenuBar)
+2025-02-24 12:09:32,487 - INFO -     Class name: 
+2025-02-24 12:09:32,488 - INFO -     Auto ID: MenuBar
+2025-02-24 12:09:32,687 - INFO -       Control: System (MenuItem)
+2025-02-24 12:09:32,687 - INFO -       Class name: 
+2025-02-24 12:09:32,688 - INFO -       Auto ID: 
+2025-02-24 12:09:32,770 - INFO -     Control: Close (Button)
+2025-02-24 12:09:32,770 - INFO -     Class name: 
+2025-02-24 12:09:32,770 - INFO -     Auto ID: 
+2025-02-24 12:09:32,831 - WARNING - Login attempt 3 failed: Expected 2 edit controls, found 0
+2025-02-24 12:09:32,832 - ERROR - Login failed: Expected 2 edit controls, found 0
+2025-02-24 12:09:32,832 - ERROR - Automation failed: Expected 2 edit controls, found 0
+2025-02-24 12:09:35,902 - INFO - Browser session closed successfully
