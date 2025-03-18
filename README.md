@@ -37,10 +37,10 @@ pip install selenium pywinauto keyboard psutil pandas pyodbc openpyxl
 
 ## Usage
 
-### QAD Automation
+### Full QAD Automation
 
 ```
-python qad-edge-automation.py --username <username> --password <password> --state-id <state-id> [--force]
+python run_full_automation.py --username <username> --password <password> [--state-id <state-id>] [--force]
 ```
 
 #### Parameters
@@ -50,10 +50,10 @@ python qad-edge-automation.py --username <username> --password <password> --stat
 - `--state-id`: QAD state ID for custom folder navigation
 - `--force`: Force execution even if QAD processes are running
 
-### Data Analysis
+### Data Analysis (Earlier Script)
 
 ```
-python analyze_demand.py [--excel-dir <directory>] [--sql-file <file>] [--output <file>] [--db-server <server>] [--db-name <database>] [--verbose]
+python "Earlier Scripts/analyze_demand.py" [--excel-dir <directory>] [--sql-file <file>] [--output <file>] [--db-server <server>] [--db-name <database>] [--verbose]
 ```
 
 #### Parameters
@@ -71,6 +71,23 @@ You can also set credentials using environment variables:
 
 - `QAD_USERNAME`: QAD username
 - `QAD_PASSWORD`: QAD password
+
+## Project Structure
+
+- **run_full_automation.py**: Main script that integrates QAD login, data export, and analysis
+- **Workflow.md**: Detailed workflow diagram of the automation process
+- **URLs.md**: Contains QAD URLs for automation
+- **Earlier Scripts/**: Contains previous versions of individual scripts
+  - **qad-edge-automation.py**: Original script for QAD login and data export
+  - **analyze_demand.py**: Original script for analyzing demand data
+- **backup/**: Contains backup versions of scripts
+  - **20250318_105714/**: Backups from March 18, 2025
+    - **run_full_automation_backup_20250318_105714.py**
+    - **Workflow_backup_20250318_105714.md**
+  - **qad-edge-automation_backup_20250314_153017.py**: Backup from March 14, 2025
+  - **Workflow_backup_20250314_153024.md**: Backup from March 14, 2025
+- **logs/**: Contains log files from automation runs
+- **sql querries/**: Contains SQL queries for data analysis
 
 ## Important Notes
 
@@ -101,9 +118,12 @@ See [Workflow.md](Workflow.md) for a detailed diagram of the automation and anal
 - If database connection fails, the analysis script will use mock data.
 - For detailed logs, check the console output or use the `--verbose` option.
 
-## Backup
+## Backup Strategy
 
-A backup of the script is available at `qad-edge-automation.py.bak`.
+The project maintains backups in the following manner:
+- Automated backups are created in the `backup/` folder with timestamps
+- Major changes are committed to the Git repository
+- Previous versions of individual scripts are preserved in the `Earlier Scripts/` folder
 
 ## URLs
 
