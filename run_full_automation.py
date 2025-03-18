@@ -330,7 +330,7 @@ def main():
             # Build the command for analyze_demand.py
             analyze_cmd = [
                 sys.executable, 
-                "analyze_demand.py",
+                "Earlier Scripts/analyze_demand.py",
                 "--excel-file", excel_file_path
             ]
             
